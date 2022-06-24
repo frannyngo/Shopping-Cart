@@ -4,10 +4,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Store from "./pages/Store";
 import NavBar from "./components/Nav/NavBar";
+import { Theme } from "./pages/GlobalStyles";
 
 function App() {
   return (
-    <div>
+    <Theme>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,7 +16,7 @@ function App() {
         <Route path="/store" element={<Store />} />
       </Routes>
       <p>hello world</p>
-    </div>
+    </Theme>
   );
 }
 
