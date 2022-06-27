@@ -1,5 +1,9 @@
-import React from "react";
+import { Section } from "./GlobalStyles";
 
 export default function About() {
-  return <p>About</p>;
+  return (
+    <Section>
+      <p>About</p>
+    </Section>
+  );
 }
