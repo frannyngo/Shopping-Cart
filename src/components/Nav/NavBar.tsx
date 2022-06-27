@@ -10,6 +10,9 @@ import {
 import Cart from "../../assets/cart.svg";
 
 export default function NavBar() {
+  function click() {
+    console.log("clicked");
+  }
   return (
     <Container color="white">
       <LinkContainer>
@@ -33,7 +36,7 @@ export default function NavBar() {
         </Link>
       </LinkContainer>
       <ShoppingCartContainer>
-        <CartButton>
+        <CartButton onClick={click}>
           <CartImage src={Cart} />
           <Counter>2</Counter>
         </CartButton>
