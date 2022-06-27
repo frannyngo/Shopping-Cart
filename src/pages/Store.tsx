@@ -1,5 +1,9 @@
-import React from "react";
+import { Section } from "./GlobalStyles";
 
 export default function Store() {
-  return <p>Store</p>;
+  return (
+    <Section>
+      <p>Store</p>
+    </Section>
+  );
 }
