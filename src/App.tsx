@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Store from "./pages/Store";
+import Store from "./pages/store/Store";
 import NavBar from "./components/Nav/NavBar";
 import { Theme } from "./pages/GlobalStyles";
 

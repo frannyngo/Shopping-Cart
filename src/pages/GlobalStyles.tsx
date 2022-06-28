@@ -21,4 +21,5 @@ export const Section = styled.section`
   padding-bottom: 100px;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 `;
