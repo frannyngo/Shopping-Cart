@@ -1,8 +1,11 @@
+import React, { useState } from "react";
 import {
   ItemInfoContainer,
   ItemImage,
   InfoContainer,
   ToggleContainer,
+  Info,
+  ToggleButton,
 } from "./ItemInfoStyles";
 
 type ItemInfoProps = {
@@ -13,6 +16,8 @@ type ItemInfoProps = {
 };
 
 export default function ItemInfo({ id, name, price, imgUrl }: ItemInfoProps) {
+  const [count, setCount] = useState(0);
+
   return (
     <ItemInfoContainer>
       <ItemImage src={imgUrl} alt={name} />
@@ -21,9 +26,9 @@ export default function ItemInfo({ id, name, price, imgUrl }: ItemInfoProps) {
         <h2>{price}</h2>
       </InfoContainer>
       <ToggleContainer>
-        <button>-</button>
-        <p>2</p>
-        <button>+</button>
+        <ToggleButton>-</ToggleButton>
+        <Info>{count} in cart</Info>
+        <ToggleButton>+</ToggleButton>
       </ToggleContainer>
     </ItemInfoContainer>
   );
