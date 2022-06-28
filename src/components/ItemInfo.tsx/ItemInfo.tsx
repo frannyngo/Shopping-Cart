@@ -7,6 +7,7 @@ import {
   Info,
   ToggleButton,
 } from "./ItemInfoStyles";
+import formatCurrency from "../../functions/formatCurrency";
 
 type ItemInfoProps = {
   id: number;
@@ -23,7 +24,7 @@ export default function ItemInfo({ id, name, price, imgUrl }: ItemInfoProps) {
       <ItemImage src={imgUrl} alt={name} />
       <InfoContainer>
         <h2>{name}</h2>
-        <h2>{price}</h2>
+        <h2>{formatCurrency(price)}</h2>
       </InfoContainer>
       <ToggleContainer>
         <ToggleButton>-</ToggleButton>
