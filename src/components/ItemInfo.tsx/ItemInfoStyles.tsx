@@ -42,3 +42,35 @@ export const ToggleButton = styled.button`
   margin-left: 5px;
   margin-right: 5px;
 `;
+
+export const RemoveOrAddContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: orange;
+`;
+
+export const RemoveButton = styled.button`
+  background: red;
+  color: white;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+`;
+
+export const AddButton = styled.button`
+  background: blue;
+  color: white;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+`;
+
+export const RemoveContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
