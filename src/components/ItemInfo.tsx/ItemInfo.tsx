@@ -12,6 +12,7 @@ import {
   RemoveContainer,
 } from "./ItemInfoStyles";
 import formatCurrency from "../../functions/formatCurrency";
+import { useShoppingCart } from "../../functions/shoppingCart";
 
 type ItemInfoProps = {
   id: number;
@@ -21,15 +22,13 @@ type ItemInfoProps = {
 };
 
 export default function ItemInfo({ id, name, price, imgUrl }: ItemInfoProps) {
-  const [count, setCount] = useState(0);
-  let quantity = 1;
-
-  function add() {
-    setCount(count + 1);
-  }
-  function minus() {
-    setCount(count - 1);
-  }
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+  } = useShoppingCart();
+  const quantity = getItemQuantity(id);
 
   return (
     <ItemInfoContainer>
@@ -40,20 +39,26 @@ export default function ItemInfo({ id, name, price, imgUrl }: ItemInfoProps) {
       </InfoContainer>
       <RemoveOrAddContainer>
         {quantity === 0 ? (
-          <AddButton>Add To Cart</AddButton>
+          <AddButton onClick={() => increaseCartQuantity(id)}>
+            Add To Cart
+          </AddButton>
         ) : (
           <RemoveContainer>
             <ToggleContainer>
               <ToggleButton
-                onClick={minus}
-                disabled={count === 0 ? true : false}
+                onClick={() => decreaseCartQuantity(id)}
+                disabled={quantity === 0 ? true : false}
               >
                 -
               </ToggleButton>
-              <Info>{count} in cart</Info>
-              <ToggleButton onClick={add}>+</ToggleButton>
+              <Info>{quantity} in cart</Info>
+              <ToggleButton onClick={() => increaseCartQuantity(id)}>
+                +
+              </ToggleButton>
             </ToggleContainer>
-            <RemoveButton>Remove</RemoveButton>
+            <RemoveButton onClick={() => removeFromCart(id)}>
+              Remove
+            </RemoveButton>
           </RemoveContainer>
         )}
       </RemoveOrAddContainer>
