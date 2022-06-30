@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const ItemInfoContainer = styled.div`
-  background: pink;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: white;
 `;
 
 export const ItemImage = styled.img`
@@ -13,14 +15,12 @@ export const ItemImage = styled.img`
 `;
 
 export const InfoContainer = styled.div`
-  background: orange;
   width: 95%;
   display: flex;
   justify-content: space-between;
 `;
 
 export const ToggleContainer = styled.div`
-  background: yellow;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -48,23 +48,22 @@ export const RemoveOrAddContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: orange;
 `;
 
 export const RemoveButton = styled.button`
-  background: red;
   color: white;
   width: 80px;
   height: 40px;
   border-radius: 5px;
+  background: red;
 `;
 
 export const AddButton = styled.button`
-  background: blue;
   color: white;
   width: 80%;
   height: 40px;
   border-radius: 5px;
+  background: blue;
 `;
 
 export const RemoveContainer = styled.div`
