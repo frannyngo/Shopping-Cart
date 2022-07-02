@@ -8,11 +8,11 @@ import {
   Counter,
 } from "./NavBarStyles";
 import Cart from "../../assets/cart.svg";
+import { useShoppingCart } from "../../functions/shoppingCart";
 
 export default function NavBar() {
-  function click() {
-    console.log("clicked");
-  }
+  const { openCart, cartQuantity } = useShoppingCart();
+
   return (
     <Container color="white">
       <LinkContainer>
@@ -36,9 +36,9 @@ export default function NavBar() {
         </Link>
       </LinkContainer>
       <ShoppingCartContainer>
-        <CartButton onClick={click}>
+        <CartButton onClick={openCart}>
           <CartImage src={Cart} />
-          <Counter>2</Counter>
+          <Counter>{cartQuantity}</Counter>
         </CartButton>
       </ShoppingCartContainer>
     </Container>
