@@ -9,17 +9,16 @@ import { ShoppingCartProvider } from "../src/functions/shoppingCart";
 
 function App() {
   return (
-    <ShoppingCartProvider>
-      <Theme>
+    <Theme>
+      <ShoppingCartProvider>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/store" element={<Store />} />
         </Routes>
-        <p>hello world</p>
-      </Theme>
-    </ShoppingCartProvider>
+      </ShoppingCartProvider>
+    </Theme>
   );
 }
 

@@ -9,6 +9,7 @@ export const Theme = styled.div`
   width: 100%;
   height: 100%;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 export const Section = styled.section`
@@ -22,4 +23,5 @@ export const Section = styled.section`
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  overflow: hidden;
 `;
