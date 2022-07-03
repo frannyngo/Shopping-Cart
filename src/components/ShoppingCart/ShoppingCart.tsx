@@ -1,4 +1,5 @@
 import { useShoppingCart } from "../../functions/shoppingCart";
+import CartItems from "../CartItems/CartItems";
 import {
   CloseButton,
   ShoppingCartContainer,
@@ -9,6 +10,7 @@ import {
 export default function ShoppingCart() {
   const { closeCart, cartItems } = useShoppingCart();
 
+  console.log(cartItems.length);
   return (
     <ShoppingCartContainer>
       <TitleDiv>
@@ -17,11 +19,7 @@ export default function ShoppingCart() {
       </TitleDiv>
       <ItemContainer>
         {cartItems.map((item) => {
-          return (
-            <div key={item.id}>
-              <p>item</p>
-            </div>
-          );
+          return <CartItems key={item.id} {...item} />;
         })}
       </ItemContainer>
     </ShoppingCartContainer>
