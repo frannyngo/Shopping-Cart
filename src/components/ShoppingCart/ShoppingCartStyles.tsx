@@ -29,7 +29,6 @@ export const TitleDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: orange;
 `;
 
 export const CloseButton = styled.button`
