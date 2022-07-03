@@ -22,18 +22,18 @@ export default function NavBar() {
         >
           Home
         </Link>
-        <Link
+        {/* <Link
           to="/store"
           style={{ textDecoration: "none", fontSize: 20, color: "black" }}
         >
           Store
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           to="/about"
           style={{ textDecoration: "none", fontSize: 20, color: "black" }}
         >
           About
-        </Link>
+        </Link> */}
       </LinkContainer>
       <ShoppingCartContainer>
         <CartButton onClick={openCart}>
