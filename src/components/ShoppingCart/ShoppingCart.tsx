@@ -1,9 +1,16 @@
-import { ShoppingCartContainer } from "./ShoppingCartStyles";
+import {
+  CloseButton,
+  ShoppingCartContainer,
+  TitleDiv,
+} from "./ShoppingCartStyles";
 
 export default function ShoppingCart() {
   return (
     <ShoppingCartContainer>
-      <h1>Cart</h1>
+      <TitleDiv>
+        <h1>Cart</h1>
+        <CloseButton>X</CloseButton>
+      </TitleDiv>
     </ShoppingCartContainer>
   );
 }
