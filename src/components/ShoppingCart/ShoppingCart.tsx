@@ -1,3 +1,4 @@
+import { useShoppingCart } from "../../functions/shoppingCart";
 import {
   CloseButton,
   ShoppingCartContainer,
@@ -5,11 +6,13 @@ import {
 } from "./ShoppingCartStyles";
 
 export default function ShoppingCart() {
+  const { closeCart } = useShoppingCart();
+
   return (
     <ShoppingCartContainer>
       <TitleDiv>
         <h1>Cart</h1>
-        <CloseButton>X</CloseButton>
+        <CloseButton onClick={closeCart}>X</CloseButton>
       </TitleDiv>
     </ShoppingCartContainer>
   );
