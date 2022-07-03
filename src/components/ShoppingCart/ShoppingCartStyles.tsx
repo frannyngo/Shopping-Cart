@@ -41,6 +41,5 @@ export const CloseButton = styled.button`
 `;
 
 export const ItemContainer = styled.div`
-  background: pink;
   width: 100%;
 `;

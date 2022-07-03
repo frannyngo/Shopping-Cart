@@ -18,7 +18,6 @@ export const NameContainer = styled.div`
 `;
 
 export const TotalContainer = styled.div`
-  background: orange;
   align-items: center;
   justify-content: center;
   display: flex;
