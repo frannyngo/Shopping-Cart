@@ -19,8 +19,8 @@ export const ShoppingCartContainer = styled.div`
   animation: 1s ${slide} ease-in;
   animation-fill-mode: forwards;
   overflow: hidden;
-  justify-content: center;
   padding: 20px;
+  flex-direction: column;
 `;
 
 export const TitleDiv = styled.div`
@@ -29,6 +29,7 @@ export const TitleDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: orange;
 `;
 
 export const CloseButton = styled.button`
@@ -38,4 +39,9 @@ export const CloseButton = styled.button`
   border-width: 0px;
   background: white;
   cursor: pointer;
+`;
+
+export const ItemContainer = styled.div`
+  background: pink;
+  width: 100%;
 `;

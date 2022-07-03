@@ -3,10 +3,11 @@ import {
   CloseButton,
   ShoppingCartContainer,
   TitleDiv,
+  ItemContainer,
 } from "./ShoppingCartStyles";
 
 export default function ShoppingCart() {
-  const { closeCart } = useShoppingCart();
+  const { closeCart, cartItems } = useShoppingCart();
 
   return (
     <ShoppingCartContainer>
@@ -14,6 +15,15 @@ export default function ShoppingCart() {
         <h1>Cart</h1>
         <CloseButton onClick={closeCart}>X</CloseButton>
       </TitleDiv>
+      <ItemContainer>
+        {cartItems.map((item) => {
+          return (
+            <div key={item.id}>
+              <p>item</p>
+            </div>
+          );
+        })}
+      </ItemContainer>
     </ShoppingCartContainer>
   );
 }
