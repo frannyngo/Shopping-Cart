@@ -16,12 +16,12 @@ export default function NavBar() {
   return (
     <Container color="white">
       <LinkContainer>
-        <Link
+        {/* <Link
           to="/"
           style={{ textDecoration: "none", fontSize: 20, color: "black" }}
         >
           Home
-        </Link>
+        </Link> */}
         {/* <Link
           to="/store"
           style={{ textDecoration: "none", fontSize: 20, color: "black" }}
